@@ -1,3 +1,3 @@
 # Tyche | Online Shopping
 
-🛠 A funky E-Commerce Website built with React.
+🛠 A funky e-commerce website built with React.
