@@ -4,6 +4,7 @@ import { useState } from 'react';
 // Import Components
 import Navbar from './components/Navbar';
 import NotificationBar from './components/NotificationBar';
+import Hero from './components/Hero';
 
 
 function App() {
@@ -17,8 +18,11 @@ function App() {
 
   return (
     <div className="App">
-      {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />}
-      <Navbar />
+      <div>
+        {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />}
+        <Navbar />
+        <Hero />
+      </div>
     </div>
   );
 }
