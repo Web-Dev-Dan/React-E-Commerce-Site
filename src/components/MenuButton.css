@@ -1,0 +1,15 @@
+
+/* Menu Button */
+.nav__user-info__button {
+    width: 5rem;
+    height: 5rem;
+}
+
+.nav__user-info__button:not(:first-child) {
+    margin-left: 2rem;
+}
+
+.nav__user-info__button--icon {
+    color: var(--color-light);
+    font-size: 2.4rem;
+}

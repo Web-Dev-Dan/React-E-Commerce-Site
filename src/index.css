@@ -35,3 +35,12 @@ button:hover {
   background-color: transparent;
   border: none;
 }
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border: none;
+}
+
+.btn-primary:hover {
+  filter: brightness(95%);
+}
