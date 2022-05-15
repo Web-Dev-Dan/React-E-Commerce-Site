@@ -12,7 +12,6 @@ function App() {
   let [notificationBarShown, setNotificationBarShown] = useState(true);
 
   const closeNotificationBar = () => {
-    console.log('Closing notification bar...');
     setNotificationBarShown(false);
   }
 
