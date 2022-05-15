@@ -1,0 +1,31 @@
+
+/* ----- 💬 Notification Bar 💬 ----- */
+
+.notification-bar {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.notification-bar__text {
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+
+.notification-bar__button {
+    width: 3rem;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+
+.notification-bar__button--icon {
+    color: var(--color-light);
+    font-size: 2.4rem;
+}

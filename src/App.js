@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { useState } from 'react';
+
+// Import Components
+import Navbar from './components/Navbar';
+import NotificationBar from './components/NotificationBar';
+
 
 function App() {
+
+  // Notification Bar
+  let [notificationBarShown, setNotificationBarShown] = useState(true);
+
+  const closeNotificationBar = () => {
+    console.log('Closing notification bar...');
+    setNotificationBarShown(false);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />}
+      <Navbar />
     </div>
   );
 }

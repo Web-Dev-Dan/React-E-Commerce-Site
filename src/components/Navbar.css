@@ -1,0 +1,15 @@
+
+/* ----- ⭐️ Navigation ⭐️ ----- */
+
+.nav {
+    background-color: var(--bg-color-light);
+    width: 100vw;
+    height: 12rem;
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo {
+    height: 80%;
+}
