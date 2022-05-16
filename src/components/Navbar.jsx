@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.css'
+import SearchBar from './SearchBar';
 import UserOptions from './UserOptions';
 
 export default function Navbar() {
@@ -8,6 +9,7 @@ export default function Navbar() {
     return (
         <nav className="nav">
             <img className="nav__logo" src="../imgs/logo.png"></img>
+            <SearchBar />
             <UserOptions />
         </nav>
     )
