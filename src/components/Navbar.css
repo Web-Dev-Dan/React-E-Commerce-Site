@@ -55,6 +55,10 @@
     font-weight: 100;
 }
 
+.search-bar__input:focus {
+    filter: brightness(95%);
+}
+
 .search-bar__button {
     width: 5rem;
     height: 5rem;
