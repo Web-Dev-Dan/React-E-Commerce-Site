@@ -9,8 +9,10 @@ export default function Navbar() {
     return (
         <nav className="nav">
             <img className="nav__logo" src="../imgs/logo.png"></img>
-            <SearchBar />
-            <UserOptions />
+            <div className="nav__options">
+                <SearchBar />
+                <UserOptions />
+            </div>
         </nav>
     )
 }

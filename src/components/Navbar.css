@@ -15,6 +15,10 @@
     height: 75%;
 }
 
+.nav__options {
+    display: flex;
+}
+
 .nav__user-info {
     /* Currently empty... */
 }
