@@ -4,23 +4,34 @@ import { useState } from 'react';
 export default function SearchBar() {
     const [select, setSelect] = useState('all');
     const [inputText, setInputText] = useState('');
+    const [selectStyles, setSelectStyles] = useState({ width: '8rem' });
 
     const handleSelectChange = (e) => {
         setSelect(e.target.value);
+
+        // --- One Click Behind: ----
+        if (select === 'all') {
+            setSelectStyles({ width: '8rem' });
+        } else if (select === 'accessories' || select === 'electronics') {
+            setSelectStyles({ width: '15rem' });
+        } else if (select === 'clothing') {
+            setSelectStyles({ width: '12rem' });
+        }
+        // ---------------------------
     }
 
     const handleInputChange = (e) => {
         setInputText(e.target.value);
     }
 
-    const handleSeachClick = () => {
+    const handleSearchClick = () => {
         console.log(inputText);
         setInputText(''); // Not working...
     }
 
     return (
         <div className="search-bar">
-            <select
+            <select style={selectStyles}
                 value={select}
                 onChange={handleSelectChange}
                 className="search-bar__dropdown"
@@ -37,7 +48,7 @@ export default function SearchBar() {
                 placeholder="Search..."
             />
             <button
-                onClick={handleSeachClick}
+                onClick={handleSearchClick}
                 className="search-bar__button btn-primary"
             >
                 <i className="search-bar__button--icon fa-solid fa-magnifying-glass"></i>
