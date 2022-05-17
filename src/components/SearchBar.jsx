@@ -2,10 +2,14 @@ import React from 'react';
 import { useState } from 'react';
 
 export default function SearchBar() {
+    const [select, setSelect] = useState('all');
     const [inputText, setInputText] = useState('');
 
+    const handleSelectChange = (e) => {
+        setSelect(e.target.value);
+    }
+
     const handleInputChange = (e) => {
-        // console.log(e.target.value);
         setInputText(e.target.value);
     }
 
@@ -16,11 +20,15 @@ export default function SearchBar() {
 
     return (
         <div className="search-bar">
-            <select className="search-bar__dropdown">
-                <option>All</option>
-                <option>Accessories</option>
-                <option>Clothing</option>
-                <option>Electronics</option>
+            <select
+                value={select}
+                onChange={handleSelectChange}
+                className="search-bar__dropdown"
+            >
+                <option value="all">All</option>
+                <option value="accessories">Accessories</option>
+                <option value="clothing">Clothing</option>
+                <option value="electronics">Electronics</option>
             </select>
             <input
                 onChange={handleInputChange}
@@ -28,9 +36,12 @@ export default function SearchBar() {
                 type="text"
                 placeholder="Search..."
             />
-            <button onClick={handleSeachClick} className="search-bar__button btn-primary">
+            <button
+                onClick={handleSeachClick}
+                className="search-bar__button btn-primary"
+            >
                 <i className="search-bar__button--icon fa-solid fa-magnifying-glass"></i>
             </button>
-        </div>
+        </div >
     )
 }
