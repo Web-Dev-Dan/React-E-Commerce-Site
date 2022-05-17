@@ -4,20 +4,9 @@ import { useState } from 'react';
 export default function SearchBar() {
     const [select, setSelect] = useState('all');
     const [inputText, setInputText] = useState('');
-    const [selectStyles, setSelectStyles] = useState({ width: '8rem' });
 
     const handleSelectChange = (e) => {
         setSelect(e.target.value);
-
-        // --- One Click Behind: ----
-        if (select === 'all') {
-            setSelectStyles({ width: '8rem' });
-        } else if (select === 'accessories' || select === 'electronics') {
-            setSelectStyles({ width: '15rem' });
-        } else if (select === 'clothing') {
-            setSelectStyles({ width: '12rem' });
-        }
-        // ---------------------------
     }
 
     const handleInputChange = (e) => {
@@ -31,10 +20,10 @@ export default function SearchBar() {
 
     return (
         <div className="search-bar">
-            <select style={selectStyles}
+            <select
                 value={select}
                 onChange={handleSelectChange}
-                className="search-bar__dropdown"
+                className={`search-bar__dropdown search-bar__dropdown--${select}`}
             >
                 <option value="all">All</option>
                 <option value="accessories">Accessories</option>

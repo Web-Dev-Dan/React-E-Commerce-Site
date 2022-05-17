@@ -45,6 +45,11 @@
     border-radius: 1rem 0 0 1rem;
 }
 
+.search-bar__dropdown--all {width: 8rem;}
+.search-bar__dropdown--accessories {width: 15rem;}
+.search-bar__dropdown--clothing {width: 12rem;}
+.search-bar__dropdown--electronics {width: 15rem;}
+
 .search-bar__input {
     flex: 1;
     background-color: var(--color-light);
