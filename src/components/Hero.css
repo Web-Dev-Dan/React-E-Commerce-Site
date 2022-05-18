@@ -45,7 +45,8 @@
     color: var(--color-dark);
     text-align: center;
     font-size: 1.8rem;
-    line-height: 1.3;
+    font-weight: 200;
+    line-height: 1.5;
 } 
 
 .hero-div__text__button {
