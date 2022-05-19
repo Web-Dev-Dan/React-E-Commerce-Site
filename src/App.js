@@ -1,10 +1,11 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // Import Components
 import Navbar from './components/Navbar';
 import NotificationBar from './components/NotificationBar';
 import Hero from './components/Hero';
+import LoginForm from './components/LoginForm';
 
 
 function App() {
@@ -16,13 +17,18 @@ function App() {
     setNotificationBarShown(false);
   }
 
+  // Home and Login Page Toggle
+  const [home, setHome] = useState(true);
+  const [login, setLogin] = useState(false);
+
   return (
     <div className="App">
-      <div>
+      {login && <LoginForm />}
+      {home && <div>
         {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />}
         <Navbar />
         <Hero />
-      </div>
+      </div>}
     </div>
   );
 }
