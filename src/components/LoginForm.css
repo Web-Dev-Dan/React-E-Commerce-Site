@@ -1,0 +1,16 @@
+.login-form {
+    background-color: white;
+    min-height: 100vh;
+}
+
+.login-form__close-button {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+}
+
+.login-form__close-button--icon{
+    font-size: 3rem;
+}

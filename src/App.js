@@ -21,9 +21,15 @@ function App() {
   const [home, setHome] = useState(true);
   const [login, setLogin] = useState(false);
 
+  const handleClose = () => {
+    console.log('Closed!');
+    setHome(!home);
+    setLogin(!login);
+  }
+
   return (
     <div className="App">
-      {login && <LoginForm />}
+      {login && <LoginForm handleClose={handleClose} />}
       {home && <div>
         {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />}
         <Navbar />

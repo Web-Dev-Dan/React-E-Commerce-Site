@@ -44,3 +44,7 @@ button:hover {
 .btn-primary:hover {
   filter: brightness(95%);
 }
+
+.btn-primary i {
+  color: white;
+}
