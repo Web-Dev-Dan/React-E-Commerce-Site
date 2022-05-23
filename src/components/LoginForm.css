@@ -1,16 +1,84 @@
 .login-form {
     background-color: white;
     min-height: 100vh;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .login-form__close-button {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     position: absolute;
-    top: 5rem;
-    right: 5rem;
+    top: 2rem;
+    right: 2rem;
 }
 
 .login-form__close-button--icon{
+    font-size: 2rem;
+}
+
+.login-form__logo {
+    width: 30rem;
+    margin-bottom: 5rem;
+}
+
+
+.login-form__inner-container {
+    /* background-color: red; */
+    width: 100%;
+    max-width: 40rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form__icon {
+    background-color: var(--color-primary);
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.login-form__icon--icon {
+    color: var(--color-light);
     font-size: 3rem;
+}
+
+.login-form__header {
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+.login-form__header--hr {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border: .1rem solid var(--color-primary);
+}
+
+.login-form__header--title {
+    background-color: var(--bg-color-light);
+    padding: 0 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.login-form__header--title h2 {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
 }

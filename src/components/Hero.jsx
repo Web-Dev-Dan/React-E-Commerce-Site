@@ -5,11 +5,11 @@ import HeroImage from '../imgs/hero-img.png';
 
 export default function Hero() {
 
-    fetch('https://fakestoreapi.com/products')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-        })
+    // fetch('https://fakestoreapi.com/products')
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log(data);
+    //     })
 
     return (
         <div className="hero">

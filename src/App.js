@@ -18,13 +18,20 @@ function App() {
   }
 
   // Home and Login Page Toggle
-  const [home, setHome] = useState(true);
-  const [login, setLogin] = useState(false);
+  const [home, setHome] = useState(false);
+  const [login, setLogin] = useState(true);
 
+  // Close Login Page
   const handleClose = () => {
     console.log('Closed!');
     setHome(!home);
     setLogin(!login);
+  }
+
+  // Open Login Page
+  const handleLogin = () => {
+    setHome(false);
+    setLogin(true);
   }
 
   return (
@@ -32,7 +39,7 @@ function App() {
       {login && <LoginForm handleClose={handleClose} />}
       {home && <div>
         {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />}
-        <Navbar />
+        <Navbar handleLogin={handleLogin} />
         <Hero />
       </div>}
     </div>
