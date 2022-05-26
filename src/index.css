@@ -48,3 +48,16 @@ button:hover {
 .btn-primary i {
   color: white;
 }
+
+.btn-text-link {
+  background-color: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  border: none;
+  text-decoration: underline;
+}
+
+.btn-text-link:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+}

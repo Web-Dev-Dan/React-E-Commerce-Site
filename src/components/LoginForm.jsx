@@ -20,7 +20,18 @@ export default function LoginForm({ handleClose }) {
                     </div>
                 </div>
 
-                <form autoComplete="off">
+                <form className="login-form__content" autoComplete="off">
+                    <div className="input-container">
+                        <input className="input-container__input" type="text" placeholder="Username" />
+                        <i className="input-container__icon fa-solid fa-user"></i>
+                    </div>
+                    <div className="input-container">
+                        <input className="input-container__input" type="password" placeholder="Password" />
+                        <i className="input-container__icon fa-solid fa-lock"></i>
+                    </div>
+                    <button className="login-form__text--button btn-text-link">Forgot
+                    Password?</button>
+                    <button className="login-form__button btn-primary">Login</button>
 
                 </form>
 
