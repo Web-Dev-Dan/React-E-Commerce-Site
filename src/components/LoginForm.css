@@ -123,7 +123,7 @@
 .login-form__text--button {
     font-size: 1.6rem;
     margin: 0 auto;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     color: var(--color-primary);
 }
 
@@ -133,4 +133,11 @@
     font-size: 2rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.login-form__text {
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    text-align: center;
 }

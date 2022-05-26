@@ -32,7 +32,10 @@ export default function LoginForm({ handleClose }) {
                     <button className="login-form__text--button btn-text-link">Forgot
                     Password?</button>
                     <button className="login-form__button btn-primary">Login</button>
-
+                    <p className="login-form__text">Not registered? <button
+                        className="login-form__text--button btn-text-link">Create an
+                        account!</button>
+                    </p>
                 </form>
 
 
