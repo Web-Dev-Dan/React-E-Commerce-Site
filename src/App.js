@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import NotificationBar from './components/NotificationBar';
 import Hero from './components/Hero';
 import LoginForm from './components/LoginForm';
+import Categories from './components/Categories';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />}
         <Navbar handleLogin={handleLogin} />
         <Hero />
+        <Categories />
       </div>}
     </div>
   );
