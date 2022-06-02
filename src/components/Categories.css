@@ -1,6 +1,16 @@
-
 .categories {
     background-color: var(--color-light);
     width: 100vw;
-    height: 50rem;
+    /* height: 50rem; */
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories-box {
+    background-color: red;
+    width: 34rem;
+    height: 34rem;
+    margin: 0 2rem;
 }
