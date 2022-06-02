@@ -7,6 +7,7 @@ import NotificationBar from './components/NotificationBar';
 import Hero from './components/Hero';
 import LoginForm from './components/LoginForm';
 import Categories from './components/Categories';
+import Offers from './components/Offers';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Navbar handleLogin={handleLogin} />
         <Hero />
         <Categories />
+        <Offers />
       </div>}
     </div>
   );

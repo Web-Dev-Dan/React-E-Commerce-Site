@@ -1,16 +1,77 @@
 .categories {
     background-color: var(--color-light);
     width: 100vw;
-    /* height: 50rem; */
-    padding: 3rem;
+    padding: 5rem;
+    padding-bottom: 10rem;
+}
+
+.categories__header {
+    color: var(--color-primary);
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.categories__boxes {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .categories-box {
-    background-color: red;
+    /* background-color: red; */
+    background-size: cover;
+    background-position: center;
     width: 34rem;
     height: 34rem;
     margin: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.categories-box__header {
+    font-family: var(--font-primary);
+    color: var(--color-light);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    height: 5rem;
+    padding: 0 2rem;
+    z-index: 10;
+}
+
+.categories-box-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .3s;
+}
+
+.categories-box-img-1 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .4)), url('../imgs/accessories-pic.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.categories-box-img-2 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .4)), url('../imgs/clothing-pic.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.categories-box-img-3 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .4)), url('../imgs/electronics-pic.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.categories-box:hover .categories-box-img {
+    transform: scale(120%);
 }
