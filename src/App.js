@@ -19,8 +19,8 @@ function App() {
   }
 
   // Home and Login Page Toggle
-  const [home, setHome] = useState(false);
-  const [login, setLogin] = useState(true);
+  const [home, setHome] = useState(true);
+  const [login, setLogin] = useState(false);
   // const [createAccount, setCreateAccount] = useState(false);
 
   // Close Login Page
