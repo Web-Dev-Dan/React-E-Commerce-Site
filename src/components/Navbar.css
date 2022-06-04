@@ -1,4 +1,3 @@
-
 /* ----- ⭐️ Navigation ⭐️ ----- */
 
 .nav {
@@ -19,9 +18,7 @@
     display: flex;
 }
 
-.nav__user-info {
-    /* Currently empty... */
-}
+/* .nav__user-info {} */
 
 .search-bar {
     background-color: var(--color-primary);
@@ -45,10 +42,21 @@
     border-radius: 1rem 0 0 1rem;
 }
 
-.search-bar__dropdown--all {width: 8rem;}
-.search-bar__dropdown--accessories {width: 15rem;}
-.search-bar__dropdown--clothing {width: 12rem;}
-.search-bar__dropdown--electronics {width: 15rem;}
+.search-bar__dropdown--all {
+    width: 8rem;
+}
+
+.search-bar__dropdown--accessories {
+    width: 15rem;
+}
+
+.search-bar__dropdown--clothing {
+    width: 12rem;
+}
+
+.search-bar__dropdown--electronics {
+    width: 15rem;
+}
 
 .search-bar__input {
     flex: 1;
@@ -77,4 +85,23 @@
 .search-bar__button--icon {
     color: var(--color-light);
     font-size: 2.4rem;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .search-bar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .nav {
+        height: 10rem;
+        padding: 0 2rem;
+    }
+
+    .nav__logo {
+        height: auto;
+        width: 65%;
+    }
 }

@@ -16,7 +16,7 @@ export default function Offers() {
 
     return (
         <div className="offers">
-            <h2 className="offers__header">Offers</h2>
+            <h2 className="offers__header">Special Offers</h2>
             <div className="offers__boxes">
                 boxes
             </div>

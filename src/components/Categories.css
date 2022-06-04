@@ -75,3 +75,20 @@
 .categories-box:hover .categories-box-img {
     transform: scale(120%);
 }
+
+
+
+@media only screen and (max-width: 1000px) {
+    .categories__boxes {
+        flex-direction: column;
+    }
+
+    .categories-box {
+        width: 100%;
+        height: 26rem;
+    }
+
+    .categories-box:not(:first-child) {
+        margin-top: 3rem;
+    }
+}
