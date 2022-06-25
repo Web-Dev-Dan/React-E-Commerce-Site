@@ -64,7 +64,9 @@ function App() {
       {/* {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />} */}
       {!login && <Navbar returnToHomePage={() => returnToHomePage()} handleLogin={handleLogin} />}
       {home && <div>
-        <Hero />
+        <Hero
+          openShoppingPage={(title) => openShoppingPage(title)}
+        />
         <Categories
           openShoppingPage={(title) => openShoppingPage(title)}
         />

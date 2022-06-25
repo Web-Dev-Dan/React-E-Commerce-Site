@@ -3,7 +3,7 @@ import ItemCard from './ItemCard';
 import Loader from './Loader';
 import './ShoppingPage.css';
 
-export default function ({ category, closeShoppingPage }) {
+export default function ShoppingPage({ category, closeShoppingPage }) {
     const [isLoading, setIsLoading] = useState(true);
 
 
@@ -31,7 +31,7 @@ export default function ({ category, closeShoppingPage }) {
                 <button onClick={closeShoppingPage} className="shopping-page__button btn-primary">
                     <i className="shopping-page__button--icon fa-solid fa-arrow-left"></i>
                 </button>
-                <h2 className="shopping-page__title">{category}</h2>
+                {category ? <h2 className="shopping-page__title">{category}</h2> : <h2 className="shopping-page__title">All</h2>}
             </div>
 
             {isLoading && <Loader />}
