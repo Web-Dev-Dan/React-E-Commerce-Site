@@ -1,0 +1,28 @@
+.loader {
+    /* background-color: green; */
+    /* width: 100px;
+    height: 100px; */
+    margin: 50px auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: rotateLoader;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.loader__icon {
+    color: var(--color-primary);
+    font-size: 10rem;
+}
+
+@keyframes rotateLoader {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(100deg)
+    }
+}

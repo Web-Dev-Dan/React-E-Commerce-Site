@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ItemCard from './ItemCard';
+import Loader from './Loader';
 import './ShoppingPage.css';
 
 export default function ({ category, closeShoppingPage }) {
@@ -32,15 +33,17 @@ export default function ({ category, closeShoppingPage }) {
                 </button>
                 <h2 className="shopping-page__title">{category}</h2>
             </div>
+
+            {isLoading && <Loader />}
+
             <div className="shopping-page__results">
                 {/* {shoppingData()} */}
-                {isLoading && <p>LOADING...</p>}
                 {!isLoading && <ItemCard />}
                 {/* <ItemCard
                     imgSource="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
                 />
                 <ItemCard /> */}
             </div>
-        </div>
+        </div >
     )
 }
