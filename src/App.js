@@ -21,10 +21,11 @@ function App() {
   }
 
   // Home and Login Page Toggle
-  const [home, setHome] = useState(false);
+  const [home, setHome] = useState(true);
   const [login, setLogin] = useState(false);
   // const [createAccount, setCreateAccount] = useState(false);
-  const [shoppingPage, setShoppingPage] = useState(true);
+  const [shoppingPage, setShoppingPage] = useState(false);
+  const [shoppingCategory, setShoppingCategory] = useState();
 
   // Close Login Page
   const handleCloseLogin = () => {
@@ -37,19 +38,33 @@ function App() {
   const handleLogin = () => {
     setHome(false);
     setLogin(true);
+    setShoppingPage(false);
   }
 
   const openShoppingPage = (title) => {
     console.log(`ID: ${title}`)
     setHome(!home);
     setShoppingPage(!shoppingPage);
+    setShoppingCategory(title.toLowerCase());
+    window.scrollTo(0, 0);
   }
+
+  const closeShoppingPage = () => {
+    setHome(!home);
+    setShoppingPage(!shoppingPage);
+    console.log('working')
+  }
+
+  const returnToHomePage = () => {
+    console.log('Home')
+  }
+
 
   return (
     <div className="App">
       {login && <LoginForm handleClose={handleCloseLogin} />}
       {/* {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />} */}
-      {!login && <Navbar handleLogin={handleLogin} />}
+      {!login && <Navbar returnToHomePage={() => returnToHomePage()} handleLogin={handleLogin} />}
       {home && <div>
         <Hero />
         <Categories
@@ -59,8 +74,11 @@ function App() {
       </div>}
 
 
-
-      {shoppingPage && <ShoppingPage />}
+      {shoppingPage &&
+        <ShoppingPage
+          category={shoppingCategory}
+          closeShoppingPage={() => closeShoppingPage()}
+        />}
     </div>
   );
 }
