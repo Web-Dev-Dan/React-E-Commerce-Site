@@ -43,9 +43,9 @@ function App() {
       {home && <div>
         {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />}
         <Navbar handleLogin={handleLogin} />
-        <Hero />
-        <Categories />
-        <Offers />
+        {home && <Hero />}
+        {home && <Categories />}
+        {home && <Offers />}
       </div>}
     </div>
   );
