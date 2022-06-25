@@ -5,7 +5,7 @@ import './ShoppingPage.css';
 export default function ({ category, closeShoppingPage }) {
     const [isLoading, setIsLoading] = useState(true);
 
-    // const shoppingData = () => {
+
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -21,7 +21,8 @@ export default function ({ category, closeShoppingPage }) {
                 console.log(error);
             })
     }, []);
-    // }
+
+
 
     return (
         <div className="shopping-page">
