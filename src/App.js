@@ -42,7 +42,6 @@ function App() {
   }
 
   const openShoppingPage = (title) => {
-    console.log(`ID: ${title}`)
     setHome(!home);
     setShoppingPage(!shoppingPage);
     setShoppingCategory(title.toLowerCase());
@@ -52,7 +51,6 @@ function App() {
   const closeShoppingPage = () => {
     setHome(!home);
     setShoppingPage(!shoppingPage);
-    console.log('working')
   }
 
   const returnToHomePage = () => {

@@ -3,16 +3,16 @@ import React from 'react';
 const CategoriesBox = ({ id, title, openShoppingPage }) => {
 
     // Temporarily access API data
-    function returnData() {
-        fetch('https://fakestoreapi.com/products')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-            })
-            .catch(error => {
-                console.log(error);
-            })
-    }
+    // function returnData() {
+    //     fetch('https://fakestoreapi.com/products')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             console.log(data);
+    //         })
+    //         .catch(error => {
+    //             console.log(error);
+    //         })
+    // }
 
     return (
         <div key={id} className="categories-box">

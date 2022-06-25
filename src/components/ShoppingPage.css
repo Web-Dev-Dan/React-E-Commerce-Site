@@ -45,5 +45,30 @@
     background-color: red;
     width: 100%;
     max-width: 100rem;
-    height: 100rem;
+    /* height: 100rem; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+
+/* Item Card */
+.item-card {
+    background-color: blue;
+    height: 400px;
+    padding: 1rem;
+}
+
+.item-card__image-container {
+    background-color: white;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px solid var(--color-primary);
+}
+
+.image-container__image {
+    height: 90%;
 }
