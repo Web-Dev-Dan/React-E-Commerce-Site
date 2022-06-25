@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CategoriesBox = ({ id, title }) => {
+const CategoriesBox = ({ id, title, openShoppingPage }) => {
 
     // Temporarily access API data
     function returnData() {
@@ -16,7 +16,8 @@ const CategoriesBox = ({ id, title }) => {
 
     return (
         <div key={id} className="categories-box">
-            <button onClick={() => returnData()} className="btn-primary categories-box__header">{title}</button>
+            {/* <button onClick={() => returnData()} className="btn-primary categories-box__header">{title}</button> */}
+            <button onClick={() => openShoppingPage(title)} className="btn-primary categories-box__header">{title}</button>
             <div className={`categories-box-img categories-box-img-${id}`}></div>
         </div >
     )

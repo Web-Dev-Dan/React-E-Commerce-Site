@@ -7,7 +7,7 @@ import ElectronicsPic from '../imgs/electronics-pic.jpg';
 
 import './Categories.css';
 
-export default function Categories() {
+export default function Categories({ openShoppingPage }) {
     const categoryList = [
         {
             'id': 1,
@@ -31,7 +31,12 @@ export default function Categories() {
             <h2 className="categories__header">Categories</h2>
             <div className="categories__boxes">
                 {categoryList.map(category => (
-                    <CategoriesBox id={category.id} title={category.title} />
+                    <CategoriesBox
+                        key={category.id}
+                        id={category.id}
+                        title={category.title}
+                        openShoppingPage={openShoppingPage}
+                    />
                 ))}
             </div>
         </div >

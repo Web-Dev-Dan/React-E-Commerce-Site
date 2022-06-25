@@ -10,7 +10,7 @@ export default function Navbar({ handleLogin }) {
         <nav className="nav">
             <img className="nav__logo" src="../imgs/logo.png"></img>
             <div className="nav__options">
-                <SearchBar />
+                {/* <SearchBar /> */}
                 <UserOptions handleLogin={handleLogin} />
             </div>
         </nav>
