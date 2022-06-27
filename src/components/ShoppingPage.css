@@ -54,9 +54,10 @@
 
 /* Item Card */
 .item-card {
-    background-color: blue;
+    background-color: var(--color-primary);
     height: 400px;
     padding: 1rem;
+    max-width: 300px;
 }
 
 .item-card__image-container {
@@ -71,4 +72,5 @@
 
 .image-container__image {
     height: 90%;
+    object-fit: contain;
 }

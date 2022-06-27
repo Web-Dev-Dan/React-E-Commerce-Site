@@ -5,18 +5,21 @@ import './ShoppingPage.css';
 
 export default function ShoppingPage({ category, closeShoppingPage }) {
     const [isLoading, setIsLoading] = useState(true);
-
-
+    const [shoppingItems, setShoppingItems] = useState([]);
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then(response => response.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setIsLoading(false);
-                data.map(() => {
-                    return <ItemCard />
-                });
+                setShoppingItems(data);
+                // data.map(item => {
+                //     // console.log(item.title)
+                //     console.log('Finished getting API data...')
+                //     shoppingItems = data;
+                //     // console.log(shoppingItems)
+                // });
             })
             .catch(error => {
                 console.log(error);
@@ -36,14 +39,27 @@ export default function ShoppingPage({ category, closeShoppingPage }) {
 
             {isLoading && <Loader />}
 
-            <div className="shopping-page__results">
+            {!isLoading && <div className="shopping-page__results">
+
+                {console.log('SHOPPING ITEMS:')}
+                {console.log(shoppingItems)}
+                {shoppingItems.map(item => {
+                    console.log(item.title)
+                    return (< ItemCard
+                        imgSource={item.image}
+                    />)
+                })}
+
+
+
+
                 {/* {shoppingData()} */}
-                {!isLoading && <ItemCard />}
-                {/* <ItemCard
-                    imgSource="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-                />
-                <ItemCard /> */}
-            </div>
+                {/* <ItemCard imgSource="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" /> */}
+                {/* <ItemCard /> */}
+
+
+
+            </div>}
         </div >
     )
 }

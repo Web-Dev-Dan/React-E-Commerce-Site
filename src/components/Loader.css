@@ -10,6 +10,7 @@
     animation-name: rotateLoader;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 .loader__icon {
