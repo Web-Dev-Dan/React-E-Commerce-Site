@@ -41,7 +41,7 @@ function App() {
     setShoppingPage(false);
   }
 
-  const openShoppingPage = (title) => {
+  const openShoppingPage = (title, shoppingCategory) => {
     setHome(!home);
     setShoppingPage(!shoppingPage);
     setShoppingCategory(title.toLowerCase());
@@ -65,10 +65,10 @@ function App() {
       {!login && <Navbar returnToHomePage={() => returnToHomePage()} handleLogin={handleLogin} />}
       {home && <div>
         <Hero
-          openShoppingPage={(title) => openShoppingPage(title)}
+          openShoppingPage={(title) => openShoppingPage(title, shoppingCategory)}
         />
         <Categories
-          openShoppingPage={(title) => openShoppingPage(title)}
+          openShoppingPage={(title) => openShoppingPage(title, shoppingCategory)}
         />
         <Offers />
       </div>}

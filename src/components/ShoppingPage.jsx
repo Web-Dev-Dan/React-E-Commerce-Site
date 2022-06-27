@@ -41,13 +41,46 @@ export default function ShoppingPage({ category, closeShoppingPage }) {
 
             {!isLoading && <div className="shopping-page__results">
 
-                {console.log('SHOPPING ITEMS:')}
-                {console.log(shoppingItems)}
+                {/* {console.log(shoppingItems)} */}
                 {shoppingItems.map(item => {
-                    console.log(item.title)
-                    return (< ItemCard
-                        imgSource={item.image}
-                    />)
+                    // console.log(item.title)
+                    if (category === 'accessories') {
+                        if (item.category === 'jewelery') {
+                            return (< ItemCard
+                                key={item.id}
+                                imgSource={item.image}
+                                title={item.title}
+                                price={item.price}
+                            />)
+                        }
+                    } else if (category === 'electronics') {
+                        if (item.category === 'electronics') {
+                            return (< ItemCard
+                                key={item.id}
+                                imgSource={item.image}
+                                title={item.title}
+                                price={item.price}
+                            />)
+                        }
+                    } else if (category === 'clothing') {
+                        if (item.category === "men's clothing" || item.category === "women's clothing") {
+                            return (< ItemCard
+                                key={item.id}
+                                imgSource={item.image}
+                                title={item.title}
+                                price={item.price}
+                            />)
+                        }
+                    } else {
+                        return (< ItemCard
+                            key={item.id}
+                            imgSource={item.image}
+                            title={item.title}
+                            price={item.price}
+                        />)
+                    }
+                    /* men's clothing, women's clothing, jewelery, electronics,   */
+
                 })}
 
 

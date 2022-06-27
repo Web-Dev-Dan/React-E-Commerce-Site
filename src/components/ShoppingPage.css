@@ -55,9 +55,16 @@
 /* Item Card */
 .item-card {
     background-color: var(--color-primary);
+    background-color: white;
     height: 400px;
     padding: 1rem;
     max-width: 300px;
+    transition: all .3s;
+}
+
+.item-card:hover {
+    transform: scale(110%);
+    cursor: pointer;
 }
 
 .item-card__image-container {
@@ -72,5 +79,39 @@
 
 .image-container__image {
     height: 90%;
-    object-fit: contain;
+    /* object-fit: contain; */
+    /* object-fit: scale-down; */
+}
+
+.item-card__header {
+    color: white;
+    color: var(--color-primary);
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.5;
+    padding: 10px 0;
+}
+
+.item-card__details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.details__price {
+    color: white;
+    color: var(--color-primary);
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.details__button {
+    min-width: 4rem;
+    height: 4rem;
+}
+
+.details__button--icon {
+    color: var(--color-light);
+    font-size: 2rem;
 }
