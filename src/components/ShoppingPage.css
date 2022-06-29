@@ -64,7 +64,7 @@
 
 .item-card:hover {
     transform: scale(110%);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .item-card__image-container {
@@ -115,3 +115,22 @@
     color: var(--color-light);
     font-size: 2rem;
 }
+
+
+/* More Info Button */
+.item-card__more-info {
+    color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 5px 10px;
+    width: 80%;
+    margin: 10px auto 0 auto;
+}
+
+.more-info__icon {
+    margin-right: 10px;
+}
+
+.more-info__text {}
