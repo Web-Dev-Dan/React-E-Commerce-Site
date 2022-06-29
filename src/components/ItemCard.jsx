@@ -1,5 +1,5 @@
 
-export default function ItemCard({ id, imgSource, title, price }) {
+export default function ItemCard({ id, imgSource, title, price, moreDetailsClick }) {
     return (
         <div className="item-card">
             {/* Image */}
@@ -17,8 +17,8 @@ export default function ItemCard({ id, imgSource, title, price }) {
             </div>
             <div className="item-card__more-info">
                 <i className="more-info__icon fa-solid fa-circle-info"></i>
-                <a onClick={() => console.log(`More info clicked (ID: ${id})`)} className="more-info__text btn-text-link">More Details</a>
+                <a onClick={() => moreDetailsClick(id)} className="more-info__text btn-text-link">More Details</a>
             </div>
-        </div>
+        </div >
     )
 }

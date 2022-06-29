@@ -3,7 +3,7 @@ import ItemCard from './ItemCard';
 import Loader from './Loader';
 import './ShoppingPage.css';
 
-export default function ShoppingPage({ category, closeShoppingPage }) {
+export default function ShoppingPage({ category, closeShoppingPage, moreDetailsClick }) {
     const [isLoading, setIsLoading] = useState(true);
     const [shoppingItems, setShoppingItems] = useState([]);
 
@@ -52,6 +52,7 @@ export default function ShoppingPage({ category, closeShoppingPage }) {
                                 imgSource={item.image}
                                 title={item.title}
                                 price={item.price}
+                                moreDetailsClick={moreDetailsClick}
                             />)
                         }
                     } else if (category === 'electronics') {
@@ -62,6 +63,7 @@ export default function ShoppingPage({ category, closeShoppingPage }) {
                                 imgSource={item.image}
                                 title={item.title}
                                 price={item.price}
+                                moreDetailsClick={moreDetailsClick}
                             />)
                         }
                     } else if (category === 'clothing') {
@@ -72,6 +74,7 @@ export default function ShoppingPage({ category, closeShoppingPage }) {
                                 imgSource={item.image}
                                 title={item.title}
                                 price={item.price}
+                                moreDetailsClick={moreDetailsClick}
                             />)
                         }
                     } else {
@@ -81,6 +84,7 @@ export default function ShoppingPage({ category, closeShoppingPage }) {
                             imgSource={item.image}
                             title={item.title}
                             price={item.price}
+                            moreDetailsClick={moreDetailsClick}
                         />)
                     }
                     /* men's clothing, women's clothing, jewelery, electronics,   */

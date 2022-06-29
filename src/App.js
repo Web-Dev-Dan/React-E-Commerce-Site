@@ -28,6 +28,7 @@ function App() {
   const [shoppingPage, setShoppingPage] = useState(false);
   const [shoppingCategory, setShoppingCategory] = useState();
   const [modalShown, setModalShown] = useState(false);
+  const [modalId, setModalId] = useState();
 
   // Close Login Page
   const handleCloseLogin = () => {
@@ -59,11 +60,26 @@ function App() {
     console.log('Home')
   }
 
+  const openShopItemModal = (id) => {
+    setModalShown(true);
+    setModalId(id);
+    console.log(`Opened modal! ID: ${id}`)
+  }
+
+  const closeShopItemModal = () => {
+    console.log('Hello')
+    setModalShown(false);
+  }
+
 
   return (
     <div className="App">
       {/* Modal */}
-      {modalShown && <Modal />}
+      {modalShown &&
+        <Modal
+          closeModalClicked={() => closeShopItemModal()}
+          id={modalId}
+        />}
 
       {login && <LoginForm handleClose={handleCloseLogin} />}
       {/* {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />} */}
@@ -83,6 +99,7 @@ function App() {
         <ShoppingPage
           category={shoppingCategory}
           closeShoppingPage={() => closeShoppingPage()}
+          moreDetailsClick={(id) => openShopItemModal(id)}
         />}
     </div>
   );
