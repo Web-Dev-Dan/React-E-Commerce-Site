@@ -27,6 +27,7 @@ body {
 
 .App {
   overflow: hidden;
+  position: relative;
 }
 
 /* Buttons */

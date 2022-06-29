@@ -1,0 +1,47 @@
+.modal-background {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    z-index: 100;
+    opacity: .8;
+}
+
+.modal-inner {
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: white;
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    position: relative;
+}
+
+.modal__close-button {
+    background-color: rgb(187, 187, 187);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    min-width: 5rem;
+    height: 5rem;
+    border-radius: 0;
+}
+
+.modal__close-button--icon {
+    color: var(--color-light);
+    font-size: 2.4rem;
+}

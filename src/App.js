@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 
 // Import Components
+import Modal from './components/Modal';
 import Navbar from './components/Navbar';
 import NotificationBar from './components/NotificationBar';
 import Hero from './components/Hero';
@@ -60,6 +61,9 @@ function App() {
 
   return (
     <div className="App">
+      {/* Modal */}
+      <Modal />
+
       {login && <LoginForm handleClose={handleCloseLogin} />}
       {/* {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />} */}
       {!login && <Navbar returnToHomePage={() => returnToHomePage()} handleLogin={handleLogin} />}

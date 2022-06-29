@@ -48,6 +48,7 @@ export default function ShoppingPage({ category, closeShoppingPage }) {
                         if (item.category === 'jewelery') {
                             return (< ItemCard
                                 key={item.id}
+                                id={item.id}
                                 imgSource={item.image}
                                 title={item.title}
                                 price={item.price}
@@ -57,6 +58,7 @@ export default function ShoppingPage({ category, closeShoppingPage }) {
                         if (item.category === 'electronics') {
                             return (< ItemCard
                                 key={item.id}
+                                id={item.id}
                                 imgSource={item.image}
                                 title={item.title}
                                 price={item.price}
@@ -66,6 +68,7 @@ export default function ShoppingPage({ category, closeShoppingPage }) {
                         if (item.category === "men's clothing" || item.category === "women's clothing") {
                             return (< ItemCard
                                 key={item.id}
+                                id={item.id}
                                 imgSource={item.image}
                                 title={item.title}
                                 price={item.price}
@@ -74,6 +77,7 @@ export default function ShoppingPage({ category, closeShoppingPage }) {
                     } else {
                         return (< ItemCard
                             key={item.id}
+                            id={item.id}
                             imgSource={item.image}
                             title={item.title}
                             price={item.price}
