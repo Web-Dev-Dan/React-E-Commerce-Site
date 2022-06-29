@@ -67,7 +67,6 @@ function App() {
   }
 
   const closeShopItemModal = () => {
-    console.log('Hello')
     setModalShown(false);
   }
 
