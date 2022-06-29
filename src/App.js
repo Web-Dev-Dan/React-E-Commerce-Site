@@ -27,6 +27,7 @@ function App() {
   // const [createAccount, setCreateAccount] = useState(false);
   const [shoppingPage, setShoppingPage] = useState(false);
   const [shoppingCategory, setShoppingCategory] = useState();
+  const [modalShown, setModalShown] = useState(false);
 
   // Close Login Page
   const handleCloseLogin = () => {
@@ -62,7 +63,7 @@ function App() {
   return (
     <div className="App">
       {/* Modal */}
-      <Modal />
+      {modalShown && <Modal />}
 
       {login && <LoginForm handleClose={handleCloseLogin} />}
       {/* {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />} */}
