@@ -78,9 +78,8 @@
 }
 
 .image-container__image {
-    height: 90%;
-    /* object-fit: contain; */
-    /* object-fit: scale-down; */
+    max-height: 90%;
+    max-width: 100%;
 }
 
 .item-card__header {
