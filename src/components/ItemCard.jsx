@@ -1,5 +1,5 @@
 
-export default function ItemCard({ id, imgSource, title, price, moreDetailsClick }) {
+export default function ItemCard({ id, imgSource, title, price, moreDetailsClick, addToBasket }) {
     return (
         <div className="item-card">
             {/* Image */}
@@ -11,7 +11,8 @@ export default function ItemCard({ id, imgSource, title, price, moreDetailsClick
             {/* Price & Buy Button */}
             <div className="item-card__details">
                 <p className="details__price">${price}</p>
-                <button onClick={() => console.log(`Add to basket clicked (ID: ${id})`)} className="details__button btn-primary">
+                {/* <button onClick={() => console.log(`Add to basket clicked (ID: ${id})`)} className="details__button btn-primary"> */}
+                <button onClick={() => addToBasket(id, imgSource, title, price)} className="details__button btn-primary">
                     <i className="details__button--icon fa-solid fa-cart-plus"></i>
                 </button>
             </div>

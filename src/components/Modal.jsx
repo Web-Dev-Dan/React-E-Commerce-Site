@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import './Modal.css';
 import Loader from './Loader';
 
-const Modal = ({ closeModalClicked, id }) => {
+const Modal = ({ closeModalClicked, id, addToBasket }) => {
     const [isLoading, setIsLoading] = useState(true);
     // const [item, setItem] = useState();
     const [imgSrc, setImgSrc] = useState();
@@ -65,17 +65,18 @@ const Modal = ({ closeModalClicked, id }) => {
                                 <div className="modal__rating-container">
                                     <p className="rating-container__rate">{rating}</p>
                                     <div className="rating-container__star-container">
-                                        <i class="star-container__star fa-solid fa-star"></i>
-                                        <i class="star-container__star fa-solid fa-star"></i>
-                                        <i class="star-container__star fa-solid fa-star"></i>
-                                        <i class="star-container__star fa-solid fa-star"></i>
-                                        <i class="star-container__star fa-solid fa-star-half"></i>
+                                        <i className="star-container__star fa-solid fa-star"></i>
+                                        <i className="star-container__star fa-solid fa-star"></i>
+                                        <i className="star-container__star fa-solid fa-star"></i>
+                                        <i className="star-container__star fa-solid fa-star"></i>
+                                        <i className="star-container__star fa-solid fa-star-half"></i>
                                     </div>
                                     <p className="rating-container__count">({ratingNumber} ratings)</p>
                                 </div>
                                 <div className="modal__buttons">
                                     <p className="modal__price">${price}</p>
-                                    <button onClick={() => console.log(`Add to basket clicked (Product: ${title})`)} className="modal__button btn-primary">
+                                    {/* <button onClick={() => console.log(`Add to basket clicked (Product: ${title})`)} className="modal__button btn-primary"> */}
+                                    <button onClick={() => addToBasket(id, imgSrc, title, price)} className="modal__button btn-primary">
                                         <i className="modal__button--icon fa-solid fa-cart-plus"></i>
                                         <p className="modal__button--text">Add to Basket</p>
                                     </button>

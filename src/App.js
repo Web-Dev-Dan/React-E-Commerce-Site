@@ -30,6 +30,8 @@ function App() {
   const [modalShown, setModalShown] = useState(false);
   const [modalId, setModalId] = useState();
 
+  const [itemsInBasket, setItemsInBasket] = useState([]);
+
   // Close Login Page
   const handleCloseLogin = () => {
     console.log('Closed!');
@@ -70,6 +72,20 @@ function App() {
     setModalShown(false);
   }
 
+  const addToBasket = (id, imgSrc, title, price) => {
+    console.log(`BOOM! Added id ${id}`)
+    console.log(`${title} is $${price}`)
+    console.log(imgSrc)
+
+    const newBasket = [...itemsInBasket];
+    newBasket.push(title);
+    setItemsInBasket(newBasket);
+    console.log(itemsInBasket);
+  }
+
+  useEffect(() => {
+    console.log(itemsInBasket);
+  }, [itemsInBasket])
 
   return (
     <div className="App">
@@ -78,6 +94,7 @@ function App() {
         <Modal
           closeModalClicked={() => closeShopItemModal()}
           id={modalId}
+          addToBasket={(id, imgSrc, title, price) => addToBasket(id, imgSrc, title, price)}
         />}
 
       {login && <LoginForm handleClose={handleCloseLogin} />}
@@ -99,6 +116,7 @@ function App() {
           category={shoppingCategory}
           closeShoppingPage={() => closeShoppingPage()}
           moreDetailsClick={(id) => openShopItemModal(id)}
+          addToBasket={(id, imgSource, title, price) => addToBasket(id, imgSource, title, price)}
         />}
     </div>
   );

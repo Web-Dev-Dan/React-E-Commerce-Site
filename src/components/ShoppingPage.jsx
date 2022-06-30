@@ -3,7 +3,7 @@ import ItemCard from './ItemCard';
 import Loader from './Loader';
 import './ShoppingPage.css';
 
-export default function ShoppingPage({ category, closeShoppingPage, moreDetailsClick }) {
+export default function ShoppingPage({ category, closeShoppingPage, moreDetailsClick, addToBasket }) {
     const [isLoading, setIsLoading] = useState(true);
     const [shoppingItems, setShoppingItems] = useState([]);
 
@@ -53,6 +53,7 @@ export default function ShoppingPage({ category, closeShoppingPage, moreDetailsC
                                 title={item.title}
                                 price={item.price}
                                 moreDetailsClick={moreDetailsClick}
+                                addToBasket={addToBasket}
                             />)
                         }
                     } else if (category === 'electronics') {
@@ -64,6 +65,7 @@ export default function ShoppingPage({ category, closeShoppingPage, moreDetailsC
                                 title={item.title}
                                 price={item.price}
                                 moreDetailsClick={moreDetailsClick}
+                                addToBasket={addToBasket}
                             />)
                         }
                     } else if (category === 'clothing') {
@@ -75,6 +77,7 @@ export default function ShoppingPage({ category, closeShoppingPage, moreDetailsC
                                 title={item.title}
                                 price={item.price}
                                 moreDetailsClick={moreDetailsClick}
+                                addToBasket={addToBasket}
                             />)
                         }
                     } else {
@@ -85,6 +88,7 @@ export default function ShoppingPage({ category, closeShoppingPage, moreDetailsC
                             title={item.title}
                             price={item.price}
                             moreDetailsClick={moreDetailsClick}
+                            addToBasket={addToBasket}
                         />)
                     }
                     /* men's clothing, women's clothing, jewelery, electronics,   */
