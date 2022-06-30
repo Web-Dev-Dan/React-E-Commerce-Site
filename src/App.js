@@ -99,7 +99,11 @@ function App() {
 
       {login && <LoginForm handleClose={handleCloseLogin} />}
       {/* {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />} */}
-      {!login && <Navbar returnToHomePage={() => returnToHomePage()} handleLogin={handleLogin} />}
+      {!login && <Navbar
+        returnToHomePage={() => returnToHomePage()}
+        handleLogin={handleLogin}
+        itemsInBasket={itemsInBasket}
+      />}
       {home && <div>
         <Hero
           openShoppingPage={(title) => openShoppingPage(title, shoppingCategory)}

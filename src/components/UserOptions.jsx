@@ -3,7 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import MenuButton from './MenuButton';
 
-export default function UserOptions({ handleLogin }) {
+export default function UserOptions({ handleLogin, itemsInBasket }) {
 
     // let [loggedIn, setLoggedIn] = useState(false);
 
@@ -27,9 +27,16 @@ export default function UserOptions({ handleLogin }) {
             {/* <MenuButton icon="fa-user" handleClick={handleLogin} /> */}
 
 
-            <MenuButton icon="fa-basket-shopping" />
-            <MenuButton icon="fa-heart" />
-            <MenuButton icon="fa-user" />
+            <MenuButton
+                icon="fa-basket-shopping"
+                itemsInBasket={itemsInBasket}
+            />
+            <MenuButton
+                icon="fa-heart"
+            />
+            <MenuButton
+                icon="fa-user"
+            />
         </div>
     )
 }
