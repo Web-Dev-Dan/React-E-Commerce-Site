@@ -108,7 +108,6 @@
     font-weight: 100;
     line-height: 1.5;
     padding-right: 50px;
-    margin-bottom: 30px;
 }
 
 .modal__buttons {
@@ -119,7 +118,7 @@
 
 .modal__price {
     color: var(--color-primary);
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 900;
 }
 
@@ -139,4 +138,35 @@
     font-size: 1.4rem;
     font-weight: 500;
     text-transform: uppercase;
+}
+
+.modal__rating-container {
+    /* background-color: red; */
+    height: 20px;
+    margin: 20px 0 30px 0;
+    display: flex;
+    align-items: center;
+}
+
+.rating-container__rate {
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+}
+
+.rating-container__star-container {
+    margin-left: 10px;
+    display: flex;
+}
+
+.star-container__star {
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+.rating-container__count {
+    color: darkgray;
+    font-size: 1.5rem;
+    margin-left: 10px;
 }

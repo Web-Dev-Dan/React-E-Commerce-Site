@@ -10,6 +10,8 @@ const Modal = ({ closeModalClicked, id }) => {
     const [category, setCategory] = useState();
     const [title, setTitle] = useState();
     const [description, setDescription] = useState();
+    const [rating, setRating] = useState();
+    const [ratingNumber, setRatingNumber] = useState();
     const [price, setPrice] = useState();
 
     useEffect(() => {
@@ -23,6 +25,8 @@ const Modal = ({ closeModalClicked, id }) => {
                 setCategory(data[id - 1].category);
                 setTitle(data[id - 1].title);
                 setDescription(data[id - 1].description);
+                setRating(data[id - 1].rating.rate);
+                setRatingNumber(data[id - 1].rating.count);
                 setPrice(data[id - 1].price);
             })
             .catch(error => {
@@ -57,6 +61,18 @@ const Modal = ({ closeModalClicked, id }) => {
                                 <p className="modal__category">{category}</p>
                                 <h3 className="modal__title">{title}</h3>
                                 <p className="modal__description">{description}</p>
+                                {/* <p>{rating} ({ratingNumber})</p> */}
+                                <div className="modal__rating-container">
+                                    <p className="rating-container__rate">{rating}</p>
+                                    <div className="rating-container__star-container">
+                                        <i class="star-container__star fa-solid fa-star"></i>
+                                        <i class="star-container__star fa-solid fa-star"></i>
+                                        <i class="star-container__star fa-solid fa-star"></i>
+                                        <i class="star-container__star fa-solid fa-star"></i>
+                                        <i class="star-container__star fa-solid fa-star-half"></i>
+                                    </div>
+                                    <p className="rating-container__count">({ratingNumber} ratings)</p>
+                                </div>
                                 <div className="modal__buttons">
                                     <p className="modal__price">${price}</p>
                                     <button onClick={() => console.log(`Add to basket clicked (Product: ${title})`)} className="modal__button btn-primary">

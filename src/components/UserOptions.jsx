@@ -19,12 +19,17 @@ export default function UserOptions({ handleLogin }) {
 
     return (
         <div className="nav__user-info">
-            {/* {loggedIn && <MenuButton icon="fa-basket-shopping" />} */}
-            {/* {loggedIn && <MenuButton icon="fa-heart" />} */}
-            {/* {loggedIn && <MenuButton icon="fa-user" handleClick={logOut} />} */}
+            {/* {loggedIn && <MenuButton icon="fa-basket-shopping" />}
+            {loggedIn && <MenuButton icon="fa-heart" />}
+            {loggedIn && <MenuButton icon="fa-user" handleClick={logOut} />} */}
 
             {/* {!loggedIn && <MenuButton icon="fa-user" handleClick={logIn} />} */}
-            <MenuButton icon="fa-user" handleClick={handleLogin} />
+            {/* <MenuButton icon="fa-user" handleClick={handleLogin} /> */}
+
+
+            <MenuButton icon="fa-basket-shopping" />
+            <MenuButton icon="fa-heart" />
+            <MenuButton icon="fa-user" />
         </div>
     )
 }
