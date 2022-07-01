@@ -16,17 +16,45 @@
 
 .basket__number {
     background-color: white;
+    background-color: var(--color-primary);
     color: var(--color-primary);
+    color: white;
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 100;
     position: absolute;
     top: -10px;
     right: -10px;
     width: 30px;
     height: 30px;
     border: 2px solid var(--color-primary);
+    border: 1px solid white;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .nav__user-info__button {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .nav__user-info__button:not(:first-child) {
+        margin-left: 1rem;
+    }
+
+    .nav__user-info__button--icon {
+        color: var(--color-light);
+        font-size: 1.8rem;
+    }
+
+    .basket__number {
+        font-size: 1rem;
+        top: -8px;
+        right: -8px;
+        width: 20px;
+        height: 20px;
+    }
 }

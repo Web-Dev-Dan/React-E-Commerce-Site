@@ -79,6 +79,10 @@
 
 
 @media only screen and (max-width: 1000px) {
+    .categories__header {
+        font-size: 4rem;
+    }
+
     .categories__boxes {
         flex-direction: column;
     }

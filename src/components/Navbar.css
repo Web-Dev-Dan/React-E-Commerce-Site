@@ -89,12 +89,20 @@
 
 
 @media only screen and (max-width: 1000px) {
+    .nav {
+        height: 12rem;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .search-bar {
         display: none;
     }
 }
 
-@media only screen and (max-width: 500px) {
+
+@media only screen and (max-width: 700px) {
     .nav {
         height: 10rem;
         padding: 0 2rem;
@@ -102,6 +110,10 @@
 
     .nav__logo {
         height: auto;
-        width: 65%;
+        width: 55%;
+    }
+
+    .nav__options {
+        display: flex;
     }
 }
