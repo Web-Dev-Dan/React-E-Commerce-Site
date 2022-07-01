@@ -18,7 +18,7 @@ export default function Hero({ openShoppingPage }) {
                 <p className="hero-div__text--description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias voluptatibus magnam a eius porro. Repellendus beatae delectus dolorem numquam magni!</p>
                 <button onClick={() => openShoppingPage('')} className="hero-div__text__button btn-primary">Start Shopping</button>
             </div>
-            <div className="hero-div">
+            <div className="hero-div hero-div__image">
                 <img className="hero__image" src={HeroImage} alt="A very happy shopper!" />
             </div>
         </div>

@@ -67,4 +67,17 @@
 }
 
 
-@media only screen and (max-width: 1000px) {}
+@media only screen and (max-width: 1000px) {
+    .hero-div {
+        max-width: 100%;
+    }
+
+    .hero-div__text:first-child {
+        margin-right: 0;
+        padding: 0 50px;
+    }
+
+    .hero-div__image {
+        display: none;
+    }
+}
