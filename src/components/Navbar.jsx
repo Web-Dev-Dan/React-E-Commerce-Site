@@ -3,7 +3,7 @@ import './Navbar.css'
 import SearchBar from './SearchBar';
 import UserOptions from './UserOptions';
 
-export default function Navbar({ handleLogin, returnToHomePage, itemsInBasket }) {
+export default function Navbar({ handleLogin, returnToHomePage, itemsInBasket, openBasket }) {
     // let loggedIn = true;
 
     return (
@@ -14,6 +14,7 @@ export default function Navbar({ handleLogin, returnToHomePage, itemsInBasket })
                 <UserOptions
                     handleLogin={handleLogin}
                     itemsInBasket={itemsInBasket}
+                    openBasket={openBasket}
                 />
             </div>
         </nav>

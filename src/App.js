@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 // Import Components
 import Modal from './components/Modal';
 import Navbar from './components/Navbar';
+import Basket from './components/Basket';
 import NotificationBar from './components/NotificationBar';
 import Hero from './components/Hero';
 import LoginForm from './components/LoginForm';
@@ -30,7 +31,9 @@ function App() {
   const [modalShown, setModalShown] = useState(false);
   const [modalId, setModalId] = useState();
 
+  const [basketShown, setBasketShown] = useState(false);
   const [itemsInBasket, setItemsInBasket] = useState([]);
+  const [totalBasketPrice, setTotalBasketPrice] = useState(0);
 
   // Close Login Page
   const handleCloseLogin = () => {
@@ -80,12 +83,22 @@ function App() {
     const newBasket = [...itemsInBasket];
     newBasket.push(title);
     setItemsInBasket(newBasket);
+    setTotalBasketPrice(prev => prev += price);
+    console.log('TOTAL BASKET PRICE:' + totalBasketPrice);
     console.log(itemsInBasket);
   }
 
   useEffect(() => {
     console.log(itemsInBasket);
-  }, [itemsInBasket])
+  }, [itemsInBasket]);
+
+  const openBasket = () => {
+    setBasketShown(true);
+  }
+
+  const closeBasket = () => {
+    setBasketShown(false);
+  }
 
   return (
     <div className="App">
@@ -103,7 +116,16 @@ function App() {
         returnToHomePage={() => returnToHomePage()}
         handleLogin={handleLogin}
         itemsInBasket={itemsInBasket}
+        openBasket={() => openBasket()}
       />}
+      {/* Basket */}
+      {basketShown && <Basket
+        itemsInBasket={itemsInBasket}
+        closeBasket={() => closeBasket()}
+        numberOfItems={itemsInBasket}
+        totalBasketPrice={totalBasketPrice}
+      />}
+
       {home && <div>
         <Hero
           openShoppingPage={(title) => openShoppingPage(title, shoppingCategory)}
