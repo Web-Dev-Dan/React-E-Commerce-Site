@@ -1,4 +1,5 @@
 
+import BasketCard from './BasketCard';
 import './Basket.css';
 
 const Basket = ({ itemsInBasket, closeBasket, numberOfItems, totalBasketPrice }) => {
@@ -10,7 +11,15 @@ const Basket = ({ itemsInBasket, closeBasket, numberOfItems, totalBasketPrice })
             </button>
 
             <h3 className="basket__header">Shopping Cart</h3>
-            <div className="basket__content">CONTENT</div>
+            <div className="basket__content">
+                {itemsInBasket.map(item => <BasketCard
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    imgSrc={item.imgSrc}
+                    price={item.price}
+                />)}
+            </div>
             <div className="basket__summary">
                 <div className="summary__details">
                     <p className="summary__details--text">Items: {numberOfItems.length}</p>

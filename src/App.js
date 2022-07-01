@@ -81,7 +81,12 @@ function App() {
     console.log(imgSrc)
 
     const newBasket = [...itemsInBasket];
-    newBasket.push(title);
+    newBasket.push({
+      'id': id,
+      'title': title,
+      'imgSrc': imgSrc,
+      'price': price
+    });
     setItemsInBasket(newBasket);
     setTotalBasketPrice(prev => prev += price);
     console.log('TOTAL BASKET PRICE:' + totalBasketPrice);

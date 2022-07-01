@@ -38,8 +38,11 @@
 .basket__content {
     flex: 1;
     min-height: 300px;
+    max-height: 450px;
+    margin: 10px 0;
     padding: 0 40px;
-    background-color: green;
+    /* background-color: green; */
+    overflow-y: scroll;
 
 }
 
@@ -50,7 +53,7 @@
 .summary__details {
     display: flex;
     justify-content: space-between;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-bottom: 20px;
 }
 
@@ -63,6 +66,7 @@
 .summary__button {
     padding: 1.5rem 3rem;
     width: 100%;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,4 +84,67 @@
 .summary__button--icon {
     font-size: 2rem;
     margin-right: 10px;
+}
+
+.basket-card {
+    /* background-color: red; */
+    width: 100%;
+    min-height: 140px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 2fr 2.5fr 1fr;
+}
+
+.basket-card__image-container {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basket-card__image {
+    max-width: 80%;
+    max-height: 120px;
+}
+
+.basket-card__details-container {
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 10px;
+}
+
+.basket-card__title {
+    color: var(--color-primary);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.basket-card__price {
+    color: var(--color-primary);
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin-top: 20px;
+}
+
+.basket-card__button-container {
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basket-card__delete-button {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basket-card__delete-button--icon {
+    font-size: 2rem;
 }
