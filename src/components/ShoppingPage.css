@@ -133,3 +133,47 @@
 }
 
 .more-info__text {}
+
+
+@media only screen and (max-width: 800px) {
+    .shopping-page__results {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .shopping-page {
+        padding: 1rem 2rem;
+        padding-bottom: 10rem;
+    }
+
+    .shopping-page__button {
+        min-width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .shopping-page__button--icon {
+        font-size: 2rem;
+    }
+
+    .shopping-page__header {
+        margin: 3rem 0;
+    }
+
+    .shopping-page__title {
+        font-size: 2.8rem;
+        padding: 1.25rem 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .shopping-page__results {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+
+    .item-card {
+        max-width: 100%;
+    }
+}
