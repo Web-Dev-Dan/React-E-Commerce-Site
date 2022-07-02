@@ -43,7 +43,6 @@
     padding: 0 40px;
     /* background-color: green; */
     overflow-y: scroll;
-
 }
 
 .basket__summary {
@@ -147,4 +146,49 @@
 
 .basket-card__delete-button--icon {
     font-size: 2rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .basket {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .basket__close-button {
+        min-width: 3rem;
+        height: 3rem;
+    }
+
+    .basket__close-button--icon {
+        font-size: 2rem;
+    }
+
+    .basket__header {
+        font-size: 2.6rem;
+    }
+
+
+    .basket-card__title {
+        font-size: 1.4rem;
+    }
+
+
+    .summary__details--text {
+        font-size: 2rem;
+    }
+
+    .summary__button--text {
+        font-size: 1.4rem;
+        letter-spacing: .1rem;
+    }
+
+    .summary__button--icon {
+        font-size: 1.6rem;
+    }
 }
