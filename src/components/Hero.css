@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: flex-start;
     overflow: hidden;
+    position: relative;
 }
 
 .hero-div {
@@ -78,6 +79,18 @@
     }
 
     .hero-div__image {
-        display: none;
+        /* display: none; */
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 50rem;
+    }
+
+    .hero-div__text {
+        z-index: 100;
+    }
+
+    .hero__image {
+        opacity: .1;
     }
 }
