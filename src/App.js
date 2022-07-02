@@ -63,6 +63,11 @@ function App() {
 
   const returnToHomePage = () => {
     console.log('Home')
+    setHome(true);
+    setLogin(false);
+    setShoppingPage(false);
+    setModalShown(false);
+    setBasketShown(false);
   }
 
   const openShopItemModal = (id) => {
@@ -116,7 +121,7 @@ function App() {
         />}
 
       {login && <LoginForm handleClose={handleCloseLogin} />}
-      {/* {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />} */}
+      {notificationBarShown && <NotificationBar text="Tyche is currently in development." handleClose={() => closeNotificationBar()} />}
       {!login && <Navbar
         returnToHomePage={() => returnToHomePage()}
         handleLogin={handleLogin}

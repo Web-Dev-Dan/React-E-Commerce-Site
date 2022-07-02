@@ -8,7 +8,7 @@ export default function Navbar({ handleLogin, returnToHomePage, itemsInBasket, o
 
     return (
         <nav className="nav">
-            <img onClick={() => returnToHomePage} className="nav__logo" src="../imgs/logo.png"></img>
+            <img onClick={() => returnToHomePage()} className="nav__logo" src="../imgs/logo.png"></img>
             <div className="nav__options">
                 {/* <SearchBar /> */}
                 <UserOptions
