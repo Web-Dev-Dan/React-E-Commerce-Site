@@ -87,7 +87,7 @@
     }
 
     .hero-div__text {
-        z-index: 100;
+        z-index: 10;
     }
 
     .hero__image {
