@@ -2,7 +2,7 @@
 import BasketCard from './BasketCard';
 import './Basket.css';
 
-const Basket = ({ itemsInBasket, closeBasket, numberOfItems, totalBasketPrice }) => {
+const Basket = ({ itemsInBasket, closeBasket, numberOfItems, totalBasketPrice, removeItem }) => {
     return (
         <div className="basket">
             {/* Close Button */}
@@ -18,6 +18,7 @@ const Basket = ({ itemsInBasket, closeBasket, numberOfItems, totalBasketPrice })
                     title={item.title}
                     imgSrc={item.imgSrc}
                     price={item.price}
+                    removeItem={removeItem}
                 />)}
             </div>
             <div className="basket__summary">

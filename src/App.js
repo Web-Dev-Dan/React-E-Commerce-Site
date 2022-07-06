@@ -110,6 +110,10 @@ function App() {
     setBasketShown(false);
   }
 
+  const removeItem = () => {
+    console.log('Item removed!');
+  }
+
   return (
     <div className="App">
       {/* Modal */}
@@ -134,6 +138,7 @@ function App() {
         closeBasket={() => closeBasket()}
         numberOfItems={itemsInBasket}
         totalBasketPrice={totalBasketPrice}
+        removeItem={() => removeItem()}
       />}
 
       {home && <div>
