@@ -18,7 +18,7 @@ export default function Offers() {
         <div className="offers">
             <h2 className="offers__header">Special Offers</h2>
             <div className="offers__boxes">
-
+                50% Off
             </div>
         </div>
     )
